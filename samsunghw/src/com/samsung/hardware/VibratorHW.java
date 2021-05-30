@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.lineageos.hardware;
+package com.android.hardware;
 
-import org.lineageos.internal.util.FileUtils;
+import com.android.internal.util.cr.FileUtils;
 
 public class VibratorHW {
 

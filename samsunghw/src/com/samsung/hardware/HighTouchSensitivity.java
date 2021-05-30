@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.lineageos.hardware;
+package com.samsung.hardware;
 
 import android.util.Log;
 
-import org.lineageos.internal.util.FileUtils;
+import com.android.internal.util.cr.FileUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

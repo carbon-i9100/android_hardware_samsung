@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.lineageos.hardware;
+package com.samsung.hardware;
 
-import org.lineageos.internal.util.FileUtils;
+import com.android.internal.util.cr.FileUtils;
 
 /**
  * Adaptive backlight support (this refers to technologies like NVIDIA SmartDimmer,

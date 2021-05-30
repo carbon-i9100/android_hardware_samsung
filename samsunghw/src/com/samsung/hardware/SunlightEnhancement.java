@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.lineageos.hardware;
+package com.samsung.hardware;
 
 import android.os.SystemProperties;
 
-import org.lineageos.internal.util.FileUtils;
+import com.android.internal.util.cr.FileUtils;
 
 /**
  * Sunlight Readability Enhancement support, aka Facemelt Mode.
