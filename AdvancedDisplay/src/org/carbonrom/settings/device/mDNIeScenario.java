@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.carbonrom.settings.device;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -25,30 +25,30 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.internal.util.FileUtils;
+import com.android.internal.util.cr.FileUtils;
 
-public class mDNIeAccessibility extends ListPreference implements Preference.OnPreferenceChangeListener {
+public class mDNIeScenario extends ListPreference implements Preference.OnPreferenceChangeListener {
 
     private static String FILE = null;
 
-    public mDNIeAccessibility(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public mDNIeScenario(Context context, AttributeSet attrs) {
+        super(context,attrs);
         this.setOnPreferenceChangeListener(this);
-        FILE = context.getResources().getString(R.string.mdnie_accessibility_sysfs_file);
+        FILE = context.getResources().getString(R.string.mdnie_scenario_sysfs_file);
     }
 
     /**
-     * Restore mdnie user mode setting from SharedPreferences. (Write to kernel.)
+     * Restore mdnie "camera" setting from SharedPreferences. (Write to kernel.)
      * @param context       The context to read the SharedPreferences from
      */
     public static void restore(Context context) {
-        FILE = context.getResources().getString(R.string.mdnie_accessibility_sysfs_file);
+        FILE = context.getResources().getString(R.string.mdnie_scenario_sysfs_file);
         if (!FileUtils.isFileWritable(FILE)) {
             return;
         }
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        FileUtils.writeLine(FILE, sharedPrefs.getString(Constants.KEY_MDNIE_ACCESSIBILITY, "0"));
+        FileUtils.writeLine(FILE, sharedPrefs.getString(Constants.KEY_MDNIE_SCENARIO, "0"));
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
