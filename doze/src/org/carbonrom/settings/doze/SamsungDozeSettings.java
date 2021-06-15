@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.doze;
+package org.carbonrom.settings.doze;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -32,7 +32,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
-import org.lineageos.internal.util.ScreenType;
+import org.carbonrom.settings.util.ScreenType;
 
 public class SamsungDozeSettings extends PreferenceFragment
         implements CompoundButton.OnCheckedChangeListener, Preference.OnPreferenceChangeListener {
