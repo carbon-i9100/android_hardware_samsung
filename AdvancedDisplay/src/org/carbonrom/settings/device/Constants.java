@@ -14,17 +14,9 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.carbonrom.settings.device;
 
-import android.os.Bundle;
-import android.preference.PreferenceActivity;
-
-public class AdvancedDisplayActivity extends PreferenceActivity {
-
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new AdvancedDisplayFragment()).commit();
-    }
+public class Constants {
+    static final String KEY_MDNIE_SCENARIO = "mdnie_scenario";
+    static final String KEY_MDNIE_ACCESSIBILITY = "mdnie_accessibility";
 }
